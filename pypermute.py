@@ -179,8 +179,8 @@ class FrequencyDistribution:
     def __str__(self):
        return str(self.dist)
 
-    #Adds a new value to the distribution or updates its frequency
     def add(self, value): 
+        """Add a new value to the distribution or updates its frequency"""
         if value in self.dist.keys():
             freq = self.dist[value]
             del self.dist[value]
@@ -188,8 +188,9 @@ class FrequencyDistribution:
         else:
             self.dist[value] = 1  
 
-    #Returns an ASCII graph of the frequencies
+
     def graph(self):
+        """Return an ASCII graph of the frequencies"""
         temp = []
 
         #Create a list of values for finding the max length of a graph row
